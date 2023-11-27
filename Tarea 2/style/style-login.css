@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=DM+Sans');
+
+body {
+    font-family: "DM Sans";
+    color: #262626;
+}
+  
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #881a12 0%, #951D15 0%, #490a05 48%, #c3483f 100%);
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  
+
+  .container {
+    background-color: #E8E8E8;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+
+  .lacarta-logo {
+    height: 140px;
+    position: relative;
+    top: -10px;
+  }
+
+
+  p {
+    color: #4A4A4A;
+    text-align: center;
+    font-size: 16px;
+    line-height: normal;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    top: -60px;
+    margin-bottom: -10px;
+  }
+
+  input {
+    background-color: #26262600;
+    border-radius: 81px;
+    border: 0.5px solid #4A4A4A;  
+    width: 300px;
+    height: 38px;
+    flex-shrink: 0;
+    font-family: "DM Sans";
+    padding-left: 16px;
+    margin-bottom: 4%;
+}
+
+input:focus {
+  border-style: none ;
+  outline: 1.5px solid;
+}
+
+.log-button { 
+    background: #2a2a2a;
+    color: white;
+    border-radius: 81px;
+    border-style: none;
+    width: 320px;
+    height: 41px;
+    flex-shrink: 0;
+    font-family: "DM Sans";
+    font-size: 14px;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+
+.log-button:hover {
+  cursor: pointer;
+  background: #343434;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+@media only screen and (max-width:786px) {
+  input {
+    width: 260px;
+}
+
+
+input:focus {
+  outline-width: 2px;
+  outline-style: auto;
+  outline: #39d63c;
+}
+
+.log-button { 
+    width: 280px;
+}
+
+
+
+}

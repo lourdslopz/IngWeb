@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css?family=DM+Sans');
+
+:root {
+    --primary: #951D15;
+    --black: #262626;
+    --white: #ebebeb;
+    --gray: #606060;
+}
+
+body {
+    font-family: "DM Sans";
+    color: #262626;
+    background-color: #e0e0e0;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+#nav {
+    background-color: var(--primary);
+    height: 55px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    color: white;
+    line-height: 50px;
+    display: flex;
+    justify-content: space-between;    
+    align-items: center;
+}
+
+#nav .mainlogo {
+    height: 58px;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+#nav #search-box {
+    background-color: #ffffff;
+    font-family: "DM Sans";
+    color: #000000;
+    width: 170px;
+    border: 0px;
+    padding: 8px;
+    padding-left: 15px;
+    border-radius: 50px;
+    font-size: 13px;
+    margin-left: auto;
+}
+
+#nav .buscar {
+    background-color: #ffffff00;
+    border-style: none;
+    height: 16px;
+    z-index: 9998;
+}
+
+#nav .img-buscar {
+    height: 16px;
+    z-index: 9999;
+    margin-top: -2px;
+    margin-left: -55px;
+}
+
+button[type="submit"]:hover {
+    cursor: pointer;
+}
+
+#nav .iniciar-sesion-btn {
+    font-family: DM Sans;
+    color: #E8E8E8;
+    background: #951e1500;
+    padding: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 13px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #E8E8E8;
+    margin-right: 25px;
+}
+
+#nav a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+#nav .iniciar-sesion-btn:hover {
+    color: #951D15;
+    background: #E8E8E8;
+    cursor: pointer;
+}
+
+#nav .iniciar-sesion-btn:hover a {
+    color: #951D15;
+    background: #E8E8E8;
+}
+
+
+
+
+
+
+
+
+
+
+#principal-container {
+    background-color: #fafafae8;
+    position: absolute;
+    top: 90px;
+    left: 30px;
+    width: 64%;
+    height: 72%;
+    border-radius: 16px;
+}
+
+
+#principal-container h2 {
+    margin-top: 40px;
+    margin-left: 35px;
+    color: var(--black);
+    font-size:28px;
+}
+
+#principal-container p {
+    margin-top: -20px;
+    margin-left: 35px;
+    color: var(--gray);
+    font-size: 16px;
+}
+
+
+#principal-container h4 {
+    position: absolute;
+    top: 30px;
+    left: 760px;
+    font-size: 28px;
+    font-weight: normal;
+    color: var(--gray);
+}
+
+#principal-container .info {
+    position: absolute;
+    top: 82px;
+    left: 810px;
+    height: 15px;
+
+}
+
+.info-popup {
+    display: none;
+    position: absolute;
+    top: -5px; 
+    left: 810px; 
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 13px;
+    width: 140px;
+    border-radius: 10px;
+    z-index: 9999;
+}
+
+.info:hover + .info-popup {
+    display: block;
+}
+
+#principal-container .principal-img {
+    margin-top: -20px;
+    margin-left: 35px;
+    border-radius: 13px;
+    width: 92%;
+    height: 66%;
+    object-fit: cover;
+
+}
+
+
+#info-container {
+    background-color: #fafafae8;
+    position: absolute;
+    top: 90px;
+    left: 928px;
+    width: 25%;
+    height: 94%;
+    border-radius: 16px;
+    padding: 16px;
+    padding-left: 33px;
+}
+
+#info-container p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-top: -20px;
+}
+
+#info-container a {
+    color: #3498db;
+    text-decoration: underline;
+    font-size: 14px;
+    margin-top: -20px;
+}
+
+#info-container a:hover {
+    cursor: pointer;
+}
+
+.platos-destacados {
+    position: absolute;
+    top: 560px;
+    left: 30px;
+    font-size: 22px;
+
+}
+
+#platos-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 16px; 
+    width: 400px; 
+    position: relative;
+    top: 610px;
+    left: 25px;
+}
+
+#plato-container {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    height: 260px;
+    border-radius: 16px;   
+    background-color: #f7f7f7;
+    margin-bottom: 10px;
+    transition: all 0.3s; 
+}
+
+#plato-container .plato-img {
+    display: flex; 
+    width: 85%;
+    height: 110px;
+    align-self: center;
+    border-radius: 10px;    
+    background-color: #E8E8E8;
+    object-fit: cover;
+    position: relative;
+    top: 15px;
+    margin-bottom: 10px;
+}
+
+#plato-container .title {
+    color: #262626;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;    
+    margin-left: 14px;
+}
+
+#plato-container .desc {
+    color: #606060;
+    font-size: 13px;
+    font-style: normal;
+    line-height: 1.2;    
+    margin-left: 15px;
+    margin-top: -18px;
+    margin-bottom: 10px;
+}
+
+
+
+.reservar-btn {
+    position: absolute;
+    top: 750px;
+    left: 928px;
+    width: 29%;
+    border-radius: 30px;
+    padding: 16px;
+    padding-left: 33px;
+    font-family: DM Sans;
+    color: #ebebeb;
+    font-size: 15px;
+    border-style: none;
+    background: var(--primary) ;
+}
+
+.descargar-menu-btn {
+    position: absolute;
+    top: 820px;
+    left: 928px;
+    width: 29%;
+    border-radius: 30px;
+    padding: 16px;
+    padding-left: 33px;
+    font-family: DM Sans;
+    color: #951D15;
+    font-size: 15px;
+    font-weight: bold;
+    border-style: solid;
+    border-color: #951D15;
+    background: none;
+}
+
+.reservar-btn:hover {
+    background: #6d1610 ;
+    cursor: pointer;
+}
+
+.descargar-menu-btn:hover {
+    cursor: pointer; 
+    border-color: #6d1610; 
+    color: #6d1610;  
+}
+
+
+
+
+
+/* ESTILOS POP-UP */
+
+  .popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 40px 40px 40px;
+    height: 65%;
+    width: 28.5%;
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    z-index: 999999;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999999;
+  }
+
+  .input-reserva, textarea {
+    margin-bottom: 10px;
+  }
+
+
+ #popup .input-reserva {
+    padding: 5px;
+    padding-left: 12px;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 0.1px;
+    border-color: var(--gray);
+    background-color: #f6f6f6;
+    font-family: "DM Sans";
+    font-size: 14px;
+ }
+
+ #personas, #sillasNinos {
+    width: 35px;
+ }
+
+
+ #comentarios {
+    resize: none;
+    padding: 8px;
+    padding-left: 12px;
+    margin-bottom: 23px;
+ }
+
+
+.cerrar-popup-reserva-btn {
+    border-style: solid;
+    border-radius: 35px;
+    border-color: #951D15;
+    border-width: 1px;
+    width: 49.4%;
+    font-family: "DM Sans";
+    color: #951D15;
+    font-size: 14px;
+    padding: 11px;
+}
+
+.cerrar-popup-reserva-btn:hover {
+    border-color: #6d1610;
+    color: #6d1610;
+    cursor: pointer;
+}
+
+.reservacion-btn {
+    border-style: none;
+    border-radius: 35px;
+    background-color: #951D15;
+    color: #e0e0e0;
+    width: 49.4%;
+    font-family: "DM Sans";
+    font-size: 14px;
+    padding: 11px;
+}
+
+.reservacion-btn:hover {
+    cursor: pointer;
+    background: #6d1610 ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos del menú inferior */
+#menuinferior {
+    background-color: #616161;
+    font-family: "DM Sans";
+    font-size: small;
+    color: #ebebeb;
+    width: 200%;
+    padding: 1px;
+    position: absolute;
+    top: 920px;
+    left: 0;
+    padding-left: 0%;
+    height: 60px;
+}
+
+#menuinferior a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+#menuinferior a:hover {
+    text-decoration: underline;
+}
+
+.listamenu {
+    display: inline-flex;
+    padding-top: 10px;
+    padding-left: 10px;
+    list-style-type: none;
+    position: relative;
+    left: 50px;
+}
+
+li {
+    margin-right: 70px;
+    transition: text-decoration 0.3s;  
+}
+
+.copyright {
+    margin-left: 780px;
+}
+
+

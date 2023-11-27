@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tacos La Neta - LaCarta</title>
+  <link rel="icon" type="image/x-icon" href="media/lacarta.ico">
+  <link rel="stylesheet" type="text/css" href="style/style-restaurant-details.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+    <header>
+
+        <div id="nav">
+          <a href="home.html"><img class="mainlogo" src="media\lacarta-w.png"></a>
+      
+          <input type="text" name="q" id="search-box"  placeholder="Buscar">
+                      <button class="buscar" type="submit"><img class="img-buscar" src="media/icons/search.png"></button>
+      
+                      <button class="iniciar-sesion-btn" type="button"><a href="index.html"">Inicia sesión</a></button>
+      
+      </div>
+      
+      </header>
+
+
+      <div id="principal-container">
+
+        <h2>Tacos La Neta</h2>
+        <p>Restaurante de comida mexicana </p>
+        <h4>$$</h4>
+        <br>
+        <img class="principal-img" src="media/restaurantes/tacoslaneta/principal.jpg">
+        <img class="info" src="media/icons/info.png">
+
+        <div class="info-popup">
+          $: Precios accesibles<br>
+          $$: Precios moderados<br>
+          $$$: Precios elevados      </div>
+
+      </div>
+
+      <div id="principal-container">
+
+        <h2>Tacos La Neta</h2>
+        <p>Restaurante de comida mexicana </p>
+        <h4>$$</h4>
+        <br>
+        <img class="principal-img" src="media/restaurantes/tacoslaneta/principal.jpg">
+        <img class="info" src="media/icons/info.png">
+
+        <div class="info-popup">
+          $: Precios accesibles<br>
+          $$: Precios moderados<br>
+          $$$: Precios elevados      </div>
+
+      </div>
+
+      <div id="info-container">
+          <h2>Información sobre el restaurante</h2>
+          <h4>Dirección</h4>
+          <p>San Francisco, Calle 21 Este, Ciudad de Panamá, Panamá
+            Plaza Los Laureles, Penonomé, Coclé</p>
+
+          <h4>Horarios</h4>
+          <p>Lunes - Viernes: 2PM-10PM<br>
+            Sábado y Domingo: 12PM-11PM</p>
+
+          <h4>Teléfonos</h4>
+          <p>322-2222<br>                       
+            231-1111</p>
+
+          <h4>Correo Electrónico</h4>
+          <p>contacto@tacoslaneta.com</p>
+
+          <h4>Sitio Web</h4>
+          <p><a>tacoslaneta.com</a></p>
+
+          <h4>Facilidades</h4>
+          <p>Sillas de bebe, accesible para personas con discapacidad de movimiento, posibilidad de parking</p>
+      </div>
+
+      <h2 class="platos-destacados">Platos más destacados</h2>
+
+      <div id="platos-grid">
+
+
+        <!-- PLATO 1 -->
+        <div id="plato-container">
+          <img class="plato-img" src="media/restaurantes/tacoslaneta/plato1.jpg" >
+          <p class="title">Quesadillas</p>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+      </div>
+
+          <!-- PLATO 2 -->
+      <div id="plato-container">
+        <img class="plato-img" src="media/restaurantes/tacoslaneta/plato2.jpg" >
+        <p class="title">Birria de Res</p>
+        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    </div>
+
+        <!-- PLATO 3 -->
+    <div id="plato-container">
+      <img class="plato-img" src="media/restaurantes/tacoslaneta/plato3.jpg" >
+      <p class="title">Nachos</p>
+      <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+  </div>
+
+        <!-- PLATO 4 -->
+  <div id="plato-container">
+    <img class="plato-img" src="media/restaurantes/tacoslaneta/plato4.jpg" >
+    <p class="title">Carnitas</p>
+    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+</div>
+
+      <!-- PLATO 5 -->
+<div id="plato-container">
+  <img class="plato-img" src="media/restaurantes/tacoslaneta/plato5.jpg" >
+  <p class="title">Burritos</p>
+  <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+</div>
+
+
+</div>
+
+<button class="reservar-btn" onclick="togglePopup()" type="button">Reservar</button>
+
+<a href="media/menu.pdf" download="menu.pdf">
+  <button class="descargar-menu-btn" type="button">Descargar menú (PDF)</button>
+</a>
+
+
+
+
+<!-- RESERVAR POP UP WINDOW -->
+
+
+<div class="overlay" id="overlay"></div>
+
+<div class="popup-container" id="popup">
+  
+  <form id="formularioReservacion">
+    <h2>Reservación</h2>
+
+    <label for="fecha">Fecha deseada:</label>
+    <input type="date" id="fecha" min="2023-01-01" class="input-reserva" name="fecha" required><br>
+
+    <label for="hora">Hora deseada:</label>
+    <input type="time" id="hora" class="input-reserva" name="hora" required><br>
+
+    <label for="personas">Personas:</label>
+    <input type="number" id="personas" class="input-reserva" name="personas" min="0" required><br>
+
+    <label for="sillasNinos">Sillas para niños:</label>
+    <input type="number" id="sillasNinos" class="input-reserva" name="sillasNinos" min="0" required><br>
+
+    <label for="comentarios">Comentarios adicionales:</label><br>
+    <textarea id="comentarios" name="comentarios" class="input-reserva" rows="4" cols="50"></textarea><br>
+
+  <button class="cerrar-popup-reserva-btn" onclick="togglePopup()">Cerrar</button>
+  <button class="reservacion-btn" onclick="reservar()">Reservar</button>
+  
+  </form>
+
+
+
+  
+</div>
+
+
+
+
+
+
+
+
+<script>
+
+// POP UP DE RESERVA
+  function togglePopup() {
+    var popup = document.getElementById("popup");
+    var overlay = document.getElementById("overlay");
+    popup.style.display = (popup.style.display === "block") ? "none" : "block";
+    overlay.style.display = (overlay.style.display === "block") ? "none" : "block";
+  }
+
+
+
+
+  function reservar() {
+
+
+
+
+
+      alert('Reservación realizada');
+    }
+
+
+// FECHA DEL SISTEMA PARA LA RESERVA
+  function obtenerFechaActual() {
+      const hoy = new Date();
+      const year = hoy.getFullYear();
+      let month = hoy.getMonth() + 1;
+      let day = hoy.getDate();
+
+      month = month < 10 ? '0' + month : month;
+      day = day < 10 ? '0' + day : day;
+
+      return `${year}-${month}-${day}`;
+    }
+    document.getElementById('fecha').min = obtenerFechaActual();
+
+
+
+
+</script>
+
+
+
+
+
+      
+
+      <footer>
+        <div id="menuinferior">
+          <ul class="listamenu">
+            <li><a href="home.html">Inicio</a></li>
+            <li><a href="busqueda-avanzada.html">Restaurantes</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li class="copyright" style="font-size: smaller;">&copy; LaCarta. 2023</li>
+
+          </ul>
+        </div>
+      </footer>
+
+
+</body>
+
+</html>
