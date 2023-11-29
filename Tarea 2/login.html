@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <title>Login - LaCarta</title>
   <link rel="icon" type="image/x-icon" href="media/lacarta.ico">
@@ -11,40 +11,25 @@
 
   <div class="background">
 
-    <div class="container">
+    <div class="container-login">
 
       <img class="lacarta-logo" src="media/lacarta.png" alt="LaCarta Logo">
       
-      <p>Inicia sesión para acceder a los<br>mejores restaurantes de Panamá</p>
+      <p >Inicia sesión para acceder a los<br>mejores restaurantes de Panamá</p>
 
-      <?php
-      // Incluir el archivo PHP externo
-      include('login.php');
 
-      // Verificar si se ha enviado el formulario
-      if ($_SERVER["REQUEST_METHOD"] == "POST") {
-          $correo = $_POST["correo"];
-          $contrasena = $_POST["contrasena"];
-
-          // Llamar a la función externa para autenticar al usuario
-          if (autenticarUsuario($correo, $contrasena)) {
-              // Inicio de sesión exitoso, redireccionar a la página de inicio
-              header("Location: home.html");
-              exit();
-          } else {
-              // Credenciales incorrectas, muestra un mensaje de error
-              echo "Credenciales incorrectas. Por favor, verifica tu correo y contraseña.";
-          }
-      }
-      ?>
-
-      <form method="post" action="">
+      <form method="post" action="login.php">
         <input type="email" name="Correo" placeholder="Correo Electrónico">
         <br>
         <input type="password" name="Contrasena" placeholder="Contraseña">
         <br>
         <button class="log-button" type="submit">Iniciar sesión</button>
       </form>
+
+
+
+      <p class="alt">¿No tienes una cuenta? <a href="registro.html" class="enfasis">Regístrate<a></a></p>
+      <a href="resetpasswd.html" class="enfasis">¿Olvidaste tu contraseña?</a></p>
 
     </div>
   </div>
